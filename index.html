@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Speed Meter</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+        .custom_transition{
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <section class="py-[50px] relative ">
+        <div class="flex gap-[6px] justify-center mx-auto w-full ">
+            <input class=" outline-0 border rounded-[6px] px-[12px] py-[11px] text-[14px] w-[300px] " placeholder="Inter Your Bick Spead" type="number" name="" id="number">
+            <span class="px-[22px] max-w-max rounded-[6px] flex items-center justify-center text-[14px] text-[#000] bg-[#fff] border cursor-pointer " id="input-btn">
+                Submit
+            </span>
+        </div>
+        <p class="text-[#FF0000] text-[12px] text-center mt-[12px] " id="error" ></p>
+        <div class=" w-[352px] h-[352px] mt-[32px] mx-auto rounded-[100%] flex items-center relative justify-center bg-cover bg-no-repeat bg-center " style=" background-image: url(/Screen-Shot-2023-04-11-at-8.00.54-AM\ \(1\).png);">
+            <div class="h-[87%] w-[87%] rounded-[100%] m-auto flex items-center justify-center relative custom_transition ">
+                <span class="bg-[#fff] rounded-[100%] h-[12px] w-[12px] absolute top-[49%] left-[48.5%]  custom_transition"></span>
+                <div class="bg-[#fff] h-[6px] w-[90%] absolute top-[49%] translate-y-[50%] left-[18px] custom_transition -rotate-[38deg] " style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);" id="rotate_box" ></div>
+            </div>
+        </div>
+    </section>
+    <script src="/app.js"></script>
+</body>
+</html>
